@@ -202,7 +202,7 @@
             <h2><b>Uncertainty Avoidance</b></h2>
           </div>
           <div class="description">
-              Uncertainty avoidance is “a society's tolerance for ambiguity”. A high score indicates stiff codes of behavior, guidelines, and laws. A lower degree in this index shows more acceptance of differing thoughts or ideas. Society tends to impose fewer regulations, ambiguity is more accustomed to, and the environment is more free-flowing.
+              Uncertainty avoidance is “a society's tolerance for ambiguity”. A high score indicates stiff codes of behavior, guidelines, and laws. A lower degree in this index shows more comfort with differing thoughts or ideas. Society tends to impose fewer regulations, ambiguity is more accepted, and the environment is more free-flowing.
           </div>
           <br />
         </div>
@@ -245,7 +245,7 @@
               <h2><b>Long Term Orientation v. Short Term Orientation</b></h2>
             </div>
             <div class="description">
-                A lower degree of this index (short-term) means that traditions and dedication are primary. A high score on this index (oriented towards the long-term) view adaptation and pragmatic problem-solving as primary. 
+                A lower degree of this index (short-term orientation) means that traditions and dedication are primary. A high score on this index (oriented towards the long-term) view adaptation and pragmatic problem-solving as primary. 
             </div>
             <br />
           </div>
@@ -301,8 +301,8 @@
               </div>
               <div class="showMasculine">
                   <ul><h3><b>Masculine Orientation</b></h3>
-                      <li>Traditional gender/family/age distinctions</li>
-                      <li>Work tasks, roles, and mastery, with quick results for limited tasks</li>
+                      <li>Upload traditional gender/family/age distinctions in imagery</li>
+                      <li>Highlight Work tasks, roles, and mastery, with quick results for limited tasks</li>
                       <li>Navigation oriented to exploration and control</li>
                       <li>Attention gained through games and competitions</li>
                       <li>Graphics, sound, and animation used for utilitarian purposes</li>
@@ -311,8 +311,8 @@
               </div>
               <div class="showFeminine">
                 <ul><h3><b>Feminine Orientation</b></h3>
-                    <li>Blurring of gender roles</li>
-                    <li>Mutual cooperation, exchange, and relational support (rather than mastery and winning)</li>
+                    <li>Gender roles may be blurred</li>
+                    <li>Demonstrate mutual cooperation, exchange, and relational support (rather than mastery and winning)</li>
                     <li>Attention gained through poetry, visual aesthetics, and appeals to unifying values</li>
                 </ul>
                 <button class="buttonStyle" onclick="refreshGender();return false;">Refresh</button>
@@ -349,9 +349,9 @@
             $('.showIndv').slideUp(hideDuration);
             inputTwo = $("#numberInput2")[0].value;
             if (inputTwo < 50){
-                $('.showHighIndividual').slideDown(showDuration);
-            } else {
                 $('.showHighCollective').slideDown(showDuration);
+            } else {
+                $('.showHighIndividual').slideDown(showDuration);
             }
         }
         function refreshIndv(){
@@ -379,9 +379,9 @@
             $('.showLTO').slideUp(hideDuration);
             inputFour = $("#numberInput4")[0].value;
             if (inputFour < 50){
-                $('.showHighLTO').slideDown(showDuration);
-            }  else {
                 $('.showSTO').slideDown(showDuration);
+            }  else {
+                $('.showHighLTO').slideDown(showDuration);
             }
         }
         function refreshLTO(){
@@ -394,9 +394,9 @@
             $('.showGender').slideUp(hideDuration);
             inputFive = $("#numberInput5")[0].value;
             if (inputFive < 50){
-                $('.showMasculine').slideDown(showDuration);
-            }  else {
                 $('.showFeminine').slideDown(showDuration);
+            }  else {
+                $('.showMasculine').slideDown(showDuration);
             }
         }
         function refreshGender(){
