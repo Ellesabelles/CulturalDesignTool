@@ -1,0 +1,219 @@
+/* unvisited link */
+a:link {
+    color: white;
+}
+  
+  /* visited link */
+a:visited {
+  color: white;
+}
+
+.about {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.about a {
+    color: #003366;
+    text-decoration: underline;
+}
+
+.about a:visited {
+    color: #003366;
+    text-decoration: underline;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #003366;
+  }
+
+.buttonStyle {
+  background-color: #003366;
+  color: white;
+  border: 1px solid #003366;
+  border-radius: 6px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 5%;
+    display: flex; 
+    justify-content: center;
+}
+
+.intro {
+    background: #003366;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.navBar {
+    display: flex;
+    color: #003366;
+    justify-content: space-around;
+    border-bottom: 5px solid #003366;
+}
+
+.navBar a {
+    color: #003366;
+}
+
+.recommendation {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.culturalDimension {
+    margin-left: 4%;
+    margin-right: 4%;
+    padding: 1%;
+    color: #003366;
+    border: 1px solid #003366;
+    background-color: lightgrey;
+}
+
+.refresh {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.titleImg {
+    background-image: url('./media/iceberg.jpg');
+    /* Full height */
+    height: 65%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.titleText {
+    display: flex;
+    justify-content: center;
+    color: #003366;
+    font-weight: bolder;
+    font-size: 72px;
+    align-items: flex-end;
+    padding: 5%;
+}
+
+.tool {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: #003366;
+}
+
+.tool a {
+    color: #003366;
+}
+
+@media only screen and (max-width: 600px) {
+    /* unvisited link */
+a:link {
+    color: white;
+}
+  
+  /* visited link */
+a:visited {
+  color: white;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.culturalDimension {
+    margin-left: 4%;
+    margin-right: 4%;
+    padding: 1%;
+    color: #003366;
+    border: 1px solid #003366;
+    background-color: lightgrey;
+}
+
+.intro {
+    background: #003366;
+    color: white;
+    padding: 5%;
+}
+
+.navBar {
+    display: flex;
+    color: white;
+    justify-content: space-around;
+}
+
+.navBar a {
+    color: #003366;
+}
+
+.pdi {
+    padding: 5%;
+}
+
+.powerDistance {
+    padding: 0%;
+}
+
+.refresh {
+    padding: 5%;
+}
+
+.titleImg {
+    background-image: url('./media/iceberg.jpg');
+    /* Full height */
+    height: 50%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.titleText {
+    display: flex;
+    justify-content: center;
+    color: #003366;
+    font-weight: bolder;
+    align-items: flex-end;
+    padding: 5%;
+    font-size: 24px;
+}
+
+.tool {
+    padding: 5%;
+}
+
+.tool a {
+    color: #003366;
+}
+}

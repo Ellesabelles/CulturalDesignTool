@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cultural Dimensions Design Recommendation Tool</title>
+  <link href="./styles.css"
+        type="text/css"
+        rel="stylesheet"
+      />
+      <link rel="icon" href="./media/globe.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+   <!-- Jquery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <style>
+       .showMeSecondIfSmall {
+           display: none;
+       }
+       .showMeSecondIfBig {
+           display: none;
+       }
+       .showMeSecondIfMedium {
+           display: none;
+       }
+       .showHighIndividual {
+           display: none;
+       }
+       .showHighCollective {
+           display: none;
+       }
+       .showHighUA {
+           display: none;
+       }
+       .showLowUA {
+           display: none;
+       }
+       .showHighLTO {
+           display: none;
+       }
+       .showSTO {
+           display: none;
+       }
+       .showMasculine {
+           display: none;
+       }
+       .showFeminine {
+           display: none;
+       }
+   </style>
+</head>
+<body>
+    <div class="navBar" > 
+        <a href="index.html"><h3>Tool</h3></a>
+        <a href="about.html"><h3>About</h3></a>
+        <a href="references.html"><h3>References</h3></a>
+    </div>
+  <div class="titleImg">
+    <div class="titleText">
+        Designing for Diverse Cultures
+    </div>
+  </div>
+    <div class="intro">
+      This tool uses <a href="https://geerthofstede.com/culture-geert-hofstede-gert-jan-hofstede/6d-model-of-national-culture/">Geert Van Hofstede's
+      cultural dimensions theory</a> and 
+      the corresponding cultural design
+      recommendations of Aaron 
+      Marcus & Emilie Gould to provide
+      an easy way to create a customized
+      list of design considerations.  
+      
+      Visit <a href="https://www.hofstede-insights.com/product/compare-countries/">
+      Hofstede's insights tool</a> to get 
+      scores for the country you are 
+      designing for, and plug those scores
+      into their corresponding cultural
+      dimension in order to see your 
+      recommendations. 
+    </div>
+    <div class="tool">
+      <h2><b>Cultural Dimensions</b></h2>
+      <ul>
+        <li><a href="#pdiID">Power Distance Index</a></li>
+        <li><a href="#individualismID">Individualism v. Collectivism</a></li>
+        <li><a href="#uaID">Uncertainty Avoidance</a></li>
+        <li><a href="#orientation">Long-Term Orientation v. Short-Term Orientation</a></li>
+        <li><a href="#gender">Masculinity v. Femininity</a></li>
+      </ul>
+    </div>
+    <div class="culturalDimension">
+      <div class="name" id="pdiID">
+        <h2><b>Power Distance</b></h2>
+      </div>
+      <div class="description">
+          Power distance refers to the extent to which less powerful members expect and accept unequal power distribution within a culture.
+      </div>
+      <br />
+    </div>
+    <div class="recommendation">
+      <div class="showMeFirst">
+        <form>
+          <br />
+          <div class="form-group">
+            <input type="Number" class="form-control" id="numberInput1" placeholder="PDI number" required="true">
+          </div>
+            <br />
+            <button class="buttonStyle" type="submit" onclick="submitFirst();return false;">Submit</button>
+            <br />
+        </form>
+        <br />
+      </div>
+      <div class="showMeSecondIfSmall">
+          <ul><h3><b>PDI Recommendations</b></h3>
+              <li>Create a loose structure for your information architecture</li>
+              <li>Use shallow architectures in mental models</li>
+              <li>Place no or low emphasis on moral or social order, such as nationalism or religion and associated symbols</li>
+              <li>Don't highlight authority, expertise, certifications, official stamps or logos</li>
+              <li>Prominence given to citizens, customers, or employees rather than to leaders</li>
+              <li>Emphasize transparency, integrated, implicit freedom to roam</li>
+              <li>Avoid using social roles to organize information (e.g., have a managers’ section obvious to all users, but sealed off from non-managers)</li>
+              <li>Consider an asymmetric layou</li>
+            </ul>
+            <button class="buttonStyle" onclick="refreshThis();return false;">Refresh</button>
+      </div>
+      <div class="showMeSecondIfMedium">
+        <ul>PDI Recommendations: 
+            <li>Steer away from extremely unstructured or extremely structured information architecture information architecture</li>
+            <li>Neither avoid nor emphasize moral or social order, such as nationalism or religion and associated symbols</li>
+            <li>Focus and highlight authority, expertise, certifications, official stamps or logos</li>
+            <li>Balance images of and references to leaders with those of citizens, customers, or employees</li>
+            <li>Emphasize importance of security and restrictions or barriers to access should be explicit, enforced, frequent restrictions on users</li>
+            <li>Social roles should frequently be used to organize information (e.g., have a managers’ section obvious to all users, but sealed off from non-managers)</li>
+          </ul>
+          <button class="buttonStyle" onclick="refreshThis();return false;">Refresh</button>
+      </div>
+      <div class="showMeSecondIfBig">
+        <ul>PDI Recommendations: 
+          <li>Create highly structured information architecture</li>
+          <li>Use tall architectures in mental models</li>
+          <li>Put high emphasis on moral or social order, such as nationalism or religion and associated symbols</li>
+          <li>Focus and highlight authority, expertise, certifications, official stamps or logos</li>
+          <li>Prominence given to leaders rather than citizens, customers, or employees</li>
+          <li>Emphasize importance of security and restrictions or barriers to access. These barriers should be explicit, enforced, frequent restrictions on users</li>
+          <li>Social roles should frequently be used to organize information (e.g., have a managers’ section obvious to all users, but sealed off from non-managers)</li>
+          <li>Consider a layout that emphasizes axial symmetry</li>
+        </ul>
+        <button class="buttonStyle" onclick="refreshThis();return false;">Refresh</button>
+      </div>
+      <br />
+    </div>
+    <div class="culturalDimension">
+        <div class="name" id="individualismID">
+          <h2><b>Individualism v. Collectivism</b></h2>
+        </div>
+        <div class="description">
+            Individualism v. Collectivism explores the “degree to which people in a society are integrated into groups.” Individualistic societies have loose ties and often only consider true bonds to exist between immediate family. Collectivism occurs in a society in which tightly-integrated relationships tie extended families and others into in-groups. A high score on the individualism v. collectivism scale indicates a highly individualistic society and a low collectivist culture. 
+        </div>
+        <br />
+      </div>
+      <div class="recommendation">
+        <div class="showIndv">
+          <form>
+            <br />
+            <div class="form-group">
+              <input type="Number" class="form-control" id="numberInput2" placeholder="Individualism Score" required="true">
+            </div>
+            <br />
+            <button class="buttonStyle" type="submit" onclick="submitIndv();return false;">Submit</button>
+          </form>
+        </div>
+        <div class="showHighIndividual">
+          <ul><h3><b>High Individualism Recommendations</b></h3>
+              <li>Maximize forms of motivation based on personal achievement and extraordinary performers</li>
+              <li>Demonstrate images of success through materialism and consumerism</li>
+              <li>Tend towards controversial/argumentative speech and tolerance or encouragement of extreme claims</li>
+              <li>Prominence given youth and action</li>
+              <li>Social morality is governed by personal truth</li>
+              <li>Products should shown being used and enjoyed by individuals</li>
+              <li>Celebrate change and what is new and unique</li>
+              <li>Willingness to provide personal information tends to be high</li>
+            </ul>
+            <button class="buttonStyle" onclick="refreshIndv();return false;">Refresh</button>
+        </div>
+        <div class="showHighCollective">
+          <ul><h3><b>High Collectivism Recommendations</b></h3> 
+            <li>Underplay motivation based on personal achievement in favor of group achievement</li>
+            <li>Images of success should focus on achievement of social-political agendas</li>
+            <li>Content should focus towards official slogans and subdued hyperbole and controversy</li>
+            <li>Prominence given to aged, experienced, wise leaders and states of being</li>
+            <li>Products should shown being used and enjoyed in groupss</li>
+            <li>Social morality should be governed by relationships</li>
+            <li>Emphasis on tradition and history rather than change</li>
+            <li>Make sure to explicitly protect personal data differentiating the individual from the group</li>
+          </ul>
+          <button class="buttonStyle" onclick="refreshIndv();return false;">Refresh</button>
+        </div>
+        <br />
+      </div>
+      <br />
+      <div class="culturalDimension">
+          <div class="name" id="uaID">
+            <h2><b>Uncertainty Avoidance</b></h2>
+          </div>
+          <div class="description">
+              Uncertainty avoidance is “a society's tolerance for ambiguity”. A high score indicates stiff codes of behavior, guidelines, and laws. A lower degree in this index shows more acceptance of differing thoughts or ideas. Society tends to impose fewer regulations, ambiguity is more accustomed to, and the environment is more free-flowing.
+          </div>
+          <br />
+        </div>
+        <div class="recommendation">
+          <div class="showUA">
+            <form>
+              <br />
+              <div class="form-group">
+                <input type="Number" class="form-control" id="numberInput3" placeholder="Uncertainty Avoidance" required="true">
+              </div>
+                <br />
+                <button class="buttonStyle" type="submit" onclick="submitUA();return false;">Submit</button>
+            </form>
+          </div>
+          <div class="showHighUA">
+              <ul><h3><b>High Uncertainty Avoidance</b></h3>
+                  <li>Simplicity, with clear metaphors, limited choices, and restricted amounts of data</li>
+                  <li>Attempts to reveal or forecast the results or implications of actions before users act </li>
+                  <li>Navigation schemes intended to prevent users from becoming lost</li>
+                  <li>Mental models and help systems that focus on reducing "user errors"</li>
+                  <li>Redundant cues (color, typography, sound, etc.) to reduce ambiguity</li>
+                </ul>
+                <button class="buttonStyle" onclick="refreshUA();return false;">Refresh</button>
+          </div>
+          <div class="showLowUA">
+            <ul><h3><b>Low Uncertainty Avoidance</b></h3>
+                <li>Complexity with maximal content and choices </li>
+                <li>Acceptance (even encouragement) of wandering and risk, with a stigma on “over-protection”</li>
+                <li>Less control of navigation; for example, links might open new windows leading away from the original location</li>
+                <li>Mental models and help systems might focus on understanding underlying concepts rather than narrow tasks</li>
+                <li>Coding of color, typography, and sound to maximize information (multiple links without redundant cueing)</li>
+              </ul>
+              <button class="buttonStyle" onclick="refreshUA();return false;">Refresh</button>
+          </div>
+          <br />
+        </div>
+        <br />
+        <div class="culturalDimension">
+            <div class="name" id="orientation">
+              <h2><b>Long Term Orientation v. Short Term Orientation</b></h2>
+            </div>
+            <div class="description">
+                A lower degree of this index (short-term) means that traditions and dedication are primary. A high score on this index (oriented towards the long-term) view adaptation and pragmatic problem-solving as primary. 
+            </div>
+            <br />
+          </div>
+          <div class="recommendation">
+            <div class="showLTO">
+              <form>
+                <br />
+                <div class="form-group">
+                  <input type="Number" class="form-control" id="numberInput4" placeholder="Long v. Short Term Orientation" required="true">
+                </div>
+                  <br />
+                  <button class="buttonStyle" type="submit" onclick="submitLTO();return false;">Submit</button>
+              </form>
+            </div>
+            <div class="showHighLTO">
+                <ul><h3><b>Long Term Orientation</b></h3>
+                    <li>Content focused on practice and practical value </li>
+                    <li>Relationships as a source of information and credibility</li>
+                    <li>Patience in achieving results and goals</li>
+                  </ul>
+                  <button class="buttonStyle" onclick="refreshLTO();return false;">Refresh</button>
+            </div>
+            <div class="showSTO">
+              <ul><h3><b>Short Term Orientation</b></h3>
+                  <li>Content focused on truth and certainty of beliefs</li>
+                  <li>Rules as a source of information and credibility</li>
+                  <li>Desire for immediate results and achievement of goals</li>
+              </ul>
+              <button class="buttonStyle" onclick="refreshLTO();return false;">Refresh</button>
+            </div>
+            <br />
+          </div>
+          <br />
+          <div class="culturalDimension">
+              <div class="name" id="gender">
+                <h2><b>Masculine v. Feminine</b></h2>
+              </div>
+              <div class="description">
+                  A high score on this index indicates a “masculine” oriented culture which is defined as “a preference in society for achievement, heroism, assertiveness and material rewards for success.” A low score on this index indicates “a preference for cooperation, modesty, caring for the weak and quality of life.”  
+              </div>
+              <br />
+            </div>
+            <div class="recommendation">
+              <div class="showGender">
+                <form>
+                  <br />
+                  <div class="form-group">
+                    <input type="Number" class="form-control" id="numberInput5" placeholder="Masculine v. Feminine" required="true">
+                  </div>
+                    <br />
+                    <button class="buttonStyle" type="submit" onclick="submitGender();return false;">Submit</button>
+                </form>
+              </div>
+              <div class="showMasculine">
+                  <ul><h3><b>Masculine Orientation</b></h3>
+                      <li>Traditional gender/family/age distinctions</li>
+                      <li>Work tasks, roles, and mastery, with quick results for limited tasks</li>
+                      <li>Navigation oriented to exploration and control</li>
+                      <li>Attention gained through games and competitions</li>
+                      <li>Graphics, sound, and animation used for utilitarian purposes</li>
+                    </ul>
+                    <button class="buttonStyle" onclick="refreshGender();return false;">Refresh</button>
+              </div>
+              <div class="showFeminine">
+                <ul><h3><b>Feminine Orientation</b></h3>
+                    <li>Blurring of gender roles</li>
+                    <li>Mutual cooperation, exchange, and relational support (rather than mastery and winning)</li>
+                    <li>Attention gained through poetry, visual aesthetics, and appeals to unifying values</li>
+                </ul>
+                <button class="buttonStyle" onclick="refreshGender();return false;">Refresh</button>
+              </div>
+            </div>
+            <br />
+            <br />
+            <footer>
+              Content sourced from the work of Geert Hofstede, Aaron Marcus, and Emilie W. Gould. Coding by Ellen Reed, 2019. 
+            </footer>
+    <script type="text/javascript" >
+        var hideDuration = 300;
+        var showDuration = 600;
+        var inputOne;
+        function submitFirst(){
+            $('.showMeFirst').slideUp(hideDuration);
+            inputOne = $("#numberInput1")[0].value;
+            if (inputOne < 33){
+                $('.showMeSecondIfSmall').slideDown(showDuration);
+            } else if (inputOne > 33 && inputOne < 66){
+                $('.showMeSecondIfMedium').slideDown(showDuration);
+            } else {
+                $('.showMeSecondIfBig').slideDown(showDuration);
+            }
+        }
+        function refreshThis(){
+          $('.showMeFirst').show();
+          $('.showMeSecondIfSmall').hide();
+            $('.showMeSecondIfMedium').hide();
+            $('.showMeSecondIfBig').hide();
+        }
+        var inputTwo;
+        function submitIndv(){
+            $('.showIndv').slideUp(hideDuration);
+            inputTwo = $("#numberInput2")[0].value;
+            if (inputTwo < 50){
+                $('.showHighIndividual').slideDown(showDuration);
+            } else {
+                $('.showHighCollective').slideDown(showDuration);
+            }
+        }
+        function refreshIndv(){
+            $('.showIndv').show();
+            $('.showHighIndividual').hide();
+            $('.showHighCollective').hide();
+        }
+        var inputThree;
+        function submitUA(){
+            $('.showUA').slideUp(hideDuration);
+            inputOne = $("#numberInput3")[0].value;
+            if (inputThree < 50){
+                $('.showLowUA').slideDown(showDuration);
+            }  else {
+                $('.showHighUA').slideDown(showDuration);
+            }
+        }
+        function refreshUA(){
+            $('.showUA').show();
+            $('.showHighUA').hide();
+            $('.showLowUA').hide();
+        }
+        var inputFour;
+        function submitLTO(){
+            $('.showLTO').slideUp(hideDuration);
+            inputOne = $("#numberInput4")[0].value;
+            if (inputFour < 50){
+                $('.showHighLTO').slideDown(showDuration);
+            }  else {
+                $('.showSTO').slideDown(showDuration);
+            }
+        }
+        function refreshLTO(){
+            $('.showLTO').show();
+            $('.showHighLTO').hide();
+            $('.showSTO').hide();
+        }
+        var inputFive;
+        function submitGender(){
+            $('.showGender').slideUp(hideDuration);
+            inputOne = $("#numberInput5")[0].value;
+            if (inputFive < 50){
+                $('.showMasculine').slideDown(showDuration);
+            }  else {
+                $('.showFeminine').slideDown(showDuration);
+            }
+        }
+        function refreshGender(){
+            $('.showGender').show();
+            $('.showMasculine').hide();
+            $('.showFeminine').hide();
+        }
+    </script>
+ </body>
+</html>
